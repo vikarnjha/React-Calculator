@@ -84,3 +84,25 @@ button[value="AC"], button[value="Back"] {
 button[value="AC"]:hover, button[value="Back"]:hover {
   background-color: #c9302c;
 }
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+    gap: 8px;
+  }
+
+  .container span {
+    font-size: 1.5rem;
+  }
+
+  .input input {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
