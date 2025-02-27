@@ -1,42 +1,86 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto repeat(5, 1fr);
+  gap: 10px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  width: 320px;
   text-align: center;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container span {
+  grid-column: span 4;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+  grid-column: span 4;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.5rem;
+  text-align: right;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 
-.card {
-  padding: 2em;
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+button:hover {
+  background-color: #555;
+}
+
+button[value="="] {
+  background-color: #ff9500;
+  color: #fff;
+}
+
+button[value="="]:hover {
+  background-color: #ffad33;
+}
+
+button[value="AC"], button[value="Back"] {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+button[value="AC"]:hover, button[value="Back"]:hover {
+  background-color: #c9302c;
 }
